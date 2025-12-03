@@ -1,0 +1,544 @@
+body {
+    position: relative;
+    background-color: #D1D6FF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*utility section*/
+.hidden {
+    opacity: 0;
+}
+
+
+
+
+
+.heading {
+    overflow: hidden;
+}
+
+.heading p {
+    background: linear-gradient(90deg, #6d28d9, #9333ea 45%, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3.2rem;
+    cursor: pointer;
+    transition: 0.6s;
+    text-align: center;
+}
+
+.heading p:hover {
+    transform: scale(1.02);
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select p {
+    font-size: 1.5rem;
+    color: black;
+    transition: underline 0.6s;
+    cursor: pointer;
+    width: 24rem;
+}
+
+.select p:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+
+.card {
+    padding: 0.9rem;
+    height: 14rem;
+    width: 20rem;
+    background-color: white;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.card span {
+    color: gray;
+}
+
+.circle {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student .circle {
+    background-color: #3b82f6;
+}
+
+.teacher .circle {
+    background-color: green;
+}
+
+.admin .circle {
+    background-color: #9333ea;
+}
+
+.student:hover {
+    transform: scale(1.02);
+    border: 1.5px solid #3b82f6;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.teacher:hover {
+    transform: scale(1.02);
+    border: 1.5px solid green;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.admin:hover {
+    transform: scale(1.02);
+    border: 1.5px solid #9333ea;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.continue {
+    height: 2.7rem;
+    width: 16rem;
+    border-radius: 1.2rem;
+    margin-top: 1.5rem;
+    color: white;
+    line-height: 2.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.continue:hover {
+    color: black;
+}
+
+.student .continue {
+    background-color: #3b82f6;
+}
+
+.teacher .continue {
+    background-color: green;
+}
+
+.admin .continue {
+    background-color: #9333ea;
+}
+
+
+.home {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    width: 6rem;
+    background-color: white;
+    color: black;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.home p {
+    margin: 0;
+    padding: 0;
+}
+
+.home:hover {
+    transform: scale(1.05);
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 30rem;
+    height: auto;
+    background: white;
+    border-radius: 0.8rem;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.login-box:hover {
+    border: 2px solid #3b82f6;
+}
+.Teacher-login:hover {
+    border: 2px solid green;
+}
+.admin-login:hover {
+    border: 2px solid #9333ea;
+}
+
+.login-box span {
+    color: gray;
+    cursor: pointer;
+}
+
+.login-box a {
+    color: #3b82f6;
+    cursor: pointer;
+
+}
+
+.label {
+    display: block;
+    text-align: left;
+    margin: 1rem 0 0.3rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: #e5e5e5;
+}
+
+.view-password, .hide-password{
+    position: absolute;
+    right: 1.2rem;
+    bottom: 8.7rem;
+    cursor: pointer;
+}
+.student-login .view-password, .student-login .hide-password{
+    position: absolute;
+    bottom: 9.7rem;
+}
+.view-password i:hover, .hide-password i:hover{
+    transform: scale(1.1);
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: #3b82f6;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.login {
+    height: 2.2rem;
+    width: 100%;
+    line-height: 2.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.login:hover {
+    transform: scale(0.95);
+}
+
+.last-text {
+    font-size: 0.8rem;
+}
+
+.last-text a:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 320px;
+    font-family: Arial, sans-serif;
+}
+
+.popup-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+.popup-box button {
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.booking-container {
+    display: flex;
+    gap: 8rem;
+}
+
+.welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.welcome p {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+
+.welcome span {
+    color: rgb(90, 89, 89);
+    padding-left: 1rem;
+}
+
+.left {
+    margin-left: 1rem;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 36rem;
+    height: 50rem;
+}
+
+.left p,
+.right p {
+    color: gray;
+}
+
+.t-card {
+    height: 5rem;
+    width: 97%;
+    border: 1px solid gray;
+    border-radius: 0.9rem;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.t-card:hover {
+    background-color: rgba(137, 255, 255, 0.09);
+    border: 1px solid #3b82f6;
+}
+
+.circular {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: #b6d1fc88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-name p {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+.t-name span {
+    font-size: 0.9rem;
+    color: gray;
+    margin-left: 1rem;
+}
+
+.t-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 5rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+}
+
+.selected:hover {
+    transform: scale(1.04);
+}
+
+.right {
+    position: fixed;
+    padding: 1rem;
+    height: 17rem;
+    width: 35rem;
+    margin: 3rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.calender i {
+    font-size: 3.1rem;
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.booking-update {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right-down {
+    height: 17rem;
+    width: 35rem;
+    margin: 3rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.right-down p {
+    color: gray;
+}
+
+.cancel {
+    height: 1.4rem;
+    width: 4rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 0.2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.cancel:hover {
+    transform: scale(1.05);
+    background-color: rgba(128, 128, 128, 0.31);
+}
+
+.book {
+    height: 1.4rem;
+    width: 4rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 0.2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+.book:hover{
+    transform: scale(1.05);
+    background-color: rgba(104, 104, 204, 0.251)
+}
+
+.date-pick {
+    height: 1.7rem;
+    width: 95%;
+    border: 1px solid gray;
+    padding-left: 1rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.date-pick:hover {
+    background-color: rgba(128, 128, 128, 0.31);
+}
+
+.date-pick p {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.logout {
+    height: 1.5rem;
+    width: 4rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.logout:hover {
+    transform: scale(1.1);
+    background-color: rgba(128, 128, 128, 0.233);
+}
